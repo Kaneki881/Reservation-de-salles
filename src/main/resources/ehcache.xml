@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.ehcache.org/v3" xmlns:jsr107="http://www.ehcache.org/v3/jsr107">
+  <service><jsr107:defaults default-template="reservation-cache"/></service>
+  <cache-template name="reservation-cache">
+    <expiry><ttl unit="minutes">60</ttl></expiry>
+    <resources><heap unit="entries">1000</heap></resources>
+  </cache-template>
+  <cache alias="com.example.model.Utilisateur" uses-template="reservation-cache"/>
+  <cache alias="com.example.model.Salle" uses-template="reservation-cache"/>
+  <cache alias="com.example.model.Reservation" uses-template="reservation-cache"/>
+  <cache alias="default-query-results-region" uses-template="reservation-cache"/>
+  <cache alias="default-update-timestamps-region" uses-template="reservation-cache"/>
+</config>
