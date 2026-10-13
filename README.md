@@ -1,6 +1,7 @@
 # Réservation de salles — TP JPA/Hibernate
 
 Application Java 8+ autonome avec JPA 2.2, Hibernate 5.4, Ehcache 3/JCache, H2 et JUnit 5. Aucun serveur MySQL n'est nécessaire pour lancer le TP. La base H2 est en mémoire et les données sont recréées à chaque exécution.
+<img width="1301" height="764" alt="image" src="https://github.com/user-attachments/assets/0640ee30-1524-4b84-b0e3-cd315318c188" />
 
 ## Exécution
 
@@ -10,6 +11,8 @@ Dans le dossier du projet :
 mvn clean test
 mvn exec:java
 ```
+## Resultat
+<img width="1686" height="803" alt="image" src="https://github.com/user-attachments/assets/3a6ca2d2-a12f-4177-be2a-1952f46dcfeb" />
 
 Sur cette machine, Maven est installé à `C:\Program Files\maven-mvnd-1.0.3-windows-amd64\mvn\bin\mvn.cmd` mais n'est pas dans `PATH`. Avec le proxy local, Java peut nécessiter `$env:MAVEN_OPTS='-Djavax.net.ssl.trustStoreType=Windows-ROOT'` avant Maven. Dans IntelliJ, lancer `com.example.MainApp` après import du `pom.xml`, ou exécuter la classe de test `com.example.ReservationTest`.
 
